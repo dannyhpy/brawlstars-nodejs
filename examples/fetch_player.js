@@ -1,6 +1,8 @@
+const BrawlStars = require('..')
 
-const client = new BrawlStars.Client({
-  token: ''
-})
+const token  = process.env.TOKEN
+const client = new BrawlStars.Client(token)
 
-client.fetchPlayer('')
+;(async function() {
+  console.log( await client.getPlayer('JJL9YVJ2') )
+})()
