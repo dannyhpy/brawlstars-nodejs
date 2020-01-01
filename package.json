@@ -1,0 +1,23 @@
+{
+  "name": "brawlstars.js",
+  "version": "0.0.1",
+  "description": "API Wrapper for Brawl Stars",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannyhpy/brawlstars-nodejs.git"
+  },
+  "keywords": [],
+  "author": "@dannyhpy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannyhpy/brawlstars-nodejs/issues"
+  },
+  "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
+  "dependencies": {
+    "request": "2.88.0"
+  }
+}
