@@ -6,7 +6,7 @@
 
 `npm install brawlstars.js`
 
-```Javascript
+```javascript
 const Brawlstars = require("brawlstars.js")
 const token      = "your token" //visit https://developer.brawlstars.com/ to get a token
 const client     = new Brawlstars.client(token)
