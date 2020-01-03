@@ -18,3 +18,7 @@ const client     = new Brawlstars.client(token)
 **Documentation**
 
 [Available here](https://brawlstarsjs.docs.apiary.io/)
+
+**Support**
+
+[Discord support](https://discord.gg/kA5DzqY)
