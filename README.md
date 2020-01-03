@@ -1,10 +1,8 @@
 # brawlstars-nodejs - API wrapper for Brawlstars in Javascript
 
-**Installation**
+**Starting**
 
 `npm install github:dannyhpy/brawlstars-nodejs`
-
-**Sarting**
 
 ```JS
 const Brawlstars = require("brawlstars.js")
@@ -19,5 +17,4 @@ const client     = new Brawlstars.client(token)
 
 **Documentation**
 
-*Available soon* -
-*Exemples available in /exemples/*
+[click here](https://brawlstarsjs.docs.apiary.io/)

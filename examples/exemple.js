@@ -10,10 +10,10 @@ const client = new BrawlStars.Client(token)
   console.log(X)
   console.log(Player.name) //OG|Diogolo
   console.log(Player.getColor()) //player's nameColor
-  console.log(Player.brawlersCount) //27
+  console.log(Player.brawlerCount) //27
 
   //Get stats of a brawler by ID or Name:
-  console.log("By Name:", Player.getBrawlerByName("MAX")) //false because the player doesn't have unclocked this brawler
+  console.log("By Name:", Player.getBrawlerByName("MAX")) //false: because the player doesn't have unclocked this brawler
   console.log("By ID:", Player.getBrawlerById("16000020"))
 
   //Get best time in robotRumble or BigBrawler:
