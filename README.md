@@ -6,7 +6,7 @@
 
 ```JS
 const Brawlstars = require("brawlstars.js")
-const token      = "your token" //visit https://api.brawlstars.com/ to get a token
+const token      = "your token" //visit https://developer.brawlstars.com/ to get a token
 const client     = new Brawlstars.client(token)
 
 (async() => {
@@ -17,4 +17,4 @@ const client     = new Brawlstars.client(token)
 
 **Documentation**
 
-[click here](https://brawlstarsjs.docs.apiary.io/)
+[Available here](https://brawlstarsjs.docs.apiary.io/)
