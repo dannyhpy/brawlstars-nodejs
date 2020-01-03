@@ -1,6 +1,6 @@
 {
   "name": "brawlstars.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API Wrapper for Brawl Stars",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/dannyhpy/brawlstars-nodejs.git"
   },
-  "keyswords": [
+  "keywords": [
     "Brawlstars",
     "Brawlstars API Wrapper",
     "Brawlstars library",

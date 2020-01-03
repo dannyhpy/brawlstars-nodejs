@@ -9,9 +9,9 @@
 ```javascript
 const Brawlstars = require("brawlstars.js")
 const token      = "your token" //visit https://developer.brawlstars.com/ to get a token
-const client     = new Brawlstars.client(token)
+const client     = new Brawlstars.Client(token)
 
-(async() => {
+;(async() => {
   const player         = await client.getPlayer("#PLAYERTAG")
   const player_club    = await client.getClub(player.club.tag)
 })()
