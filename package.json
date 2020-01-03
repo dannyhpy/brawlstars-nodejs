@@ -1,23 +1,39 @@
 {
   "name": "brawlstars.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API Wrapper for Brawl Stars",
   "main": "index.js",
   "directories": {
+    "example": "examples",
     "lib": "lib"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dannyhpy/brawlstars-nodejs.git"
   },
-  "keywords": [],
-  "author": "@dannyhpy",
-  "license": "ISC",
+  "keyswords": [
+    "Brawlstars",
+    "Brawlstars API Wrapper",
+    "Brawlstars library",
+    "Brawlstars Javascript"
+  ],
+  "author": "@dannyhpy (https://dannyhpy.xyz)",
+  "contributors": [
+    {
+      "name": "@diogolo",
+      "email": "contact@diogolo.space",
+      "url": "https://diogolo.space/"
+    }
+  ],
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/dannyhpy/brawlstars-nodejs/issues"
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
   "dependencies": {
     "request": "2.88.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
