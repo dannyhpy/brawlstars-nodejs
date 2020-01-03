@@ -8,16 +8,16 @@
 
 ```JS
 const Brawlstars = require("brawlstars.js")
-const tokne      = "your token" //visit https://api.brawlstars.com/ to get a token
+const token      = "your token" //visit https://api.brawlstars.com/ to get a token
 const client     = new Brawlstars.client(token)
 
 (async() => {
   const player         = await client.getPlayer("#PLAYERTAG")
-  const player_club    = await client.getClub(Player.club.tag)
+  const player_club    = await client.getClub(player.club.tag)
 })()
 ```
 
 **Documentation**
 
-*Available soon*
+*Available soon* -
 *Exemples available in /exemples/*
