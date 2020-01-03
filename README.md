@@ -2,7 +2,7 @@
 
 **brawlstars.js is an API wrapper for Brawlstars in Javascript**
 
-### Starting
+## Starting
 
 `npm install brawlstars.js`
 
@@ -17,10 +17,10 @@ const client     = new Brawlstars.client(token)
 })()
 ```
 
-### Documentation
+## Documentation
 
 [Available here](https://brawlstarsjs.docs.apiary.io/)
 
-### Support
+## Support
 
 [Discord support](https://discord.gg/kA5DzqY)
