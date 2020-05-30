@@ -7,13 +7,13 @@
 `npm install brawlstars.js`
 
 ```javascript
-const Brawlstars = require("brawlstars.js")
-const token      = "your token" //visit https://developer.brawlstars.com/ to get a token
-const client     = new Brawlstars.Client(token)
+const BrawlStars = require("brawlstars.js")
+const token      = "Your Token" // Visit https://developer.brawlstars.com/ to get a token
+const client     = new BrawlStars.Client(token)
 
 ;(async() => {
-  const player         = await client.getPlayer("#PLAYERTAG")
-  const player_club    = await client.getClub(player.club.tag)
+  const player     = await client.getPlayer("#PLAYERTAG")
+  const playerClub = await client.getClub(player.club.tag)
 })()
 ```
 

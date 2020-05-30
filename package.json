@@ -1,6 +1,6 @@
 {
   "name": "brawlstars.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "API Wrapper for Brawl Stars",
   "main": "index.js",
   "directories": {
