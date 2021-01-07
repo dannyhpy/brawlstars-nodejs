@@ -16,7 +16,7 @@ const client = new BrawlStars.Client(process.env.TOKEN)
 
   // Get best time in robotRumble or BigBrawler:
   console.log('Rumble', player.bestRoboRumbleTime) // 794
-  console.log('BigBrawler', player.bestTimeToTxt('robotRumble')) // 13m14s
+  console.log('BigBrawler', player.bestTime(1)) // 13m14s
 
   // Club
   if (player.club) {
