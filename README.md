@@ -1,6 +1,6 @@
 # brawlstars.js
 
-**brawlstars.js is an API wrapper for Brawlstars in Javascript**
+**brawlstars.js is an API wrapper for Brawl Stars in Javascript.**
 
 ## Starting
 
@@ -11,7 +11,7 @@ const BrawlStars = require("brawlstars.js")
 const token      = "Your Token" // Visit https://developer.brawlstars.com/ to get a token
 const client     = new BrawlStars.Client(token)
 
-;(async() => {
+(async() => {
   const player     = await client.getPlayer("#PLAYERTAG")
   const playerClub = await client.getClub(player.club.tag)
 })()
