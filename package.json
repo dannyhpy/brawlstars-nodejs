@@ -1,6 +1,6 @@
 {
   "name": "brawlstars.js",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "API Wrapper for Brawl Stars",
   "main": "index.js",
   "directories": {
@@ -21,8 +21,7 @@
   "contributors": [
     {
       "name": "@diogolo",
-      "email": "contact@diogolo.space",
-      "url": "https://diogolo.space/"
+      "url": "https://atlar.fr/"
     }
   ],
   "license": "Apache-2.0",

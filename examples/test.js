@@ -1,6 +1,7 @@
 const BrawlStars = require('..')
 const client = new BrawlStars.Client(process.env.TOKEN)
 
+
 ;(async function () {
   const X = '###########################'
   const player = await client.getPlayer('#R8GVJ8GR') // get player by #ID
@@ -9,6 +10,10 @@ const client = new BrawlStars.Client(process.env.TOKEN)
   console.log(player.name) // OG|Diogolo
   console.log(player.hexColor) // player's nameColor in hex format
   console.log(player.brawlerCount) // 27
+  console.log(constants.WIN_TYPE_TRIO)
+  console.log(player.getWins(BrawlStars.Constants.WIN_TYPE_TOTAL)); //333
+  console.log(player.gadgetsCount) //6
+  console.log(player.starpowersCount) //5
 
   // Get stats of a brawler by ID or Name:
   console.log('By Name:', player.getBrawlerByName('MAX')) // false: because the player doesn't have unclocked this brawler
