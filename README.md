@@ -23,4 +23,4 @@ const client     = new BrawlStars.Client(token)
 
 ## Support
 
-[Discord support](https://discord.gg/kA5DzqY)
+[Discord support](https://discord.gg/Tt6nbfUBnP)
