@@ -1,6 +1,6 @@
 # brawlstars.js
 
-**brawlstars.js is an API wrapper for Brawlstars in Javascript**
+**brawlstars.js is an API wrapper for Brawl Stars in Javascript**
 
 ## Starting
 

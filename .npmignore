@@ -1,0 +1,13 @@
+# git
+.git
+.gitignore
+
+# Node.js specific stuff
+package-lock.json
+node_modules
+
+# Examples directory
+examples
+
+# README.md file
+README.md
