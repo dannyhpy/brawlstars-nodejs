@@ -12,12 +12,12 @@
     "url": "git+https://github.com/dannyhpy/brawlstars-nodejs.git"
   },
   "keywords": [
-    "Brawlstars",
-    "Brawlstars API Wrapper",
-    "Brawlstars library",
-    "Brawlstars Javascript"
+    "brawlstars",
+    "api",
+    "library",
+    "nodejs"
   ],
-  "author": "@dannyhpy (https://dannyhpy.xyz)",
+  "author": "@dannyhpy",
   "contributors": [
     {
       "name": "@diogolo",
@@ -30,9 +30,7 @@
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "2.6.1"
   },
-  "scripts": {
-    "test": "node examples/test.js"
-  }
+  "typings": "typings"
 }
