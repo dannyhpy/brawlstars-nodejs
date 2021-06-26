@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const package = require('../package.json')
+const BrawlStars = require('..')
+
+const token = process.env.TOKEN
+if (token == null) {
+  // TODO: Save and retrieve token locallly
+  // via `brawlstars token set <...>` & `brawlstars token get`
+  console.error('The TOKEN environment variable is missing')
+  process.exit(1)
+}
+
+const BrawlStars = require('..')
+const bs = new BrawlStars.Client(token)
+
+switch (process.argv[2]) {
+  case 'help':
+  case '-h':
+  case '--help':
+    break
+
+  case 'players':
+    break
+
+  default:
+    console.error('Command not found.')
+    process.exit(1)
+}
