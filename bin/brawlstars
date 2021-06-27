@@ -11,13 +11,20 @@ if (token == null) {
   process.exit(1)
 }
 
-const BrawlStars = require('..')
 const bs = new BrawlStars.Client(token)
 
 switch (process.argv[2]) {
+  case 'h':
   case 'help':
   case '-h':
   case '--help':
+    break
+
+  case 'v':
+  case 'version':
+  case '-v':
+  case '--version':
+    console.log(`v${package.version}`)
     break
 
   case 'players':
@@ -25,5 +32,6 @@ switch (process.argv[2]) {
 
   default:
     console.error('Command not found.')
+    console.error('See \'brawlstars help\' for more information.')
     process.exit(1)
 }
