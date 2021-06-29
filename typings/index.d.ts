@@ -11,10 +11,23 @@ declare module 'brawlstars.js' {
 
   interface PlayerProperties {
     tag: string
+    // ...
   }
 
   interface ClubProperties {
     tag: string
+    // ...
+  }
+
+  interface EventProperties {
+    startTime: string
+    endTime: string
+    event: {
+      id: number
+      mode: string
+      map: string
+      modifiers?: string[]
+    }
   }
 
   export class Client {
@@ -23,6 +36,7 @@ declare module 'brawlstars.js' {
 
     readonly players: PlayerManager
     readonly clubs: ClubManager
+    readonly events: EventManager
 
     /**
      * Token used to interact with the Brawl Stars API.
@@ -33,12 +47,12 @@ declare module 'brawlstars.js' {
     /**
      * @deprecated Use `client.players.fetch` instead
      */
-    getPlayer (tag: string): Player
+    getPlayer (tag: string): Promise<Player>
 
     /**
      * @deprecated Use `client.clubs.fetch` instead
      */
-    getClub (tag: string): Club
+    getClub (tag: string): Promise<Club>
   }
 
   export class PlayerManager {
@@ -48,7 +62,7 @@ declare module 'brawlstars.js' {
     /**
      * Fetch a player using his in-game tag
      */
-    fetch (tag: string): Player
+    fetch (tag: string): Promise<Player>
   }
   
   export class Player {
@@ -72,7 +86,7 @@ declare module 'brawlstars.js' {
     /**
      * Fetch a club using its in-game tag
      */
-    fetch (tag: string): Club
+    fetch (tag: string): Promise<Club>
   }
 
   export class Club {
@@ -88,5 +102,21 @@ declare module 'brawlstars.js' {
   export class ClubIcon extends DownloadableFile {
     constructor (id: number)
     readonly id: number
+  }
+
+  export class EventManager {
+    constructor (client: Client)
+    readonly client: Client
+
+    /** Fetch a list of the current active events */
+    fetch (): Promise<Event[]>
+  }
+
+  export class Event {
+    constructor (client: Client)
+    readonly client: Client
+
+    readonly startsAt: Date
+    readonly endsAt: Date
   }
 }
