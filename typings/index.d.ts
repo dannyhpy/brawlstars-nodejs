@@ -19,6 +19,12 @@ declare module 'brawlstars.js' {
     // ...
   }
 
+  interface BrawlerProperties {
+    id: number
+    name: string
+    // ...
+  }
+
   interface EventProperties {
     startTime: string
     endTime: string
@@ -36,6 +42,7 @@ declare module 'brawlstars.js' {
 
     readonly players: PlayerManager
     readonly clubs: ClubManager
+    readonly brawlers: BrawlerManager
     readonly events: EventManager
 
     /**
@@ -53,6 +60,11 @@ declare module 'brawlstars.js' {
      * @deprecated Use `client.clubs.fetch` instead
      */
     getClub (tag: string): Promise<Club>
+
+    /**
+     * @deprecated Use `client.brawlers.fetch` instead
+     */
+    getBrawlers (): Promise<Brawler[]>
   }
 
   export class PlayerManager {
@@ -103,6 +115,24 @@ declare module 'brawlstars.js' {
     constructor (id: number)
     readonly id: number
   }
+
+  export class BrawlerManager {
+    constructor (client: Client)
+    readonly client: Client
+
+    fetch (id: number): Promise<Brawler>
+    fetchAll (): Promise<Brawler[]>
+  }
+
+  export class Brawler {
+    constructor (client: Client, props: BrawlerProperties)
+    readonly client: Client
+
+    readonly id: number
+    readonly name: string
+  }
+
+  export class BrawlerIcon {}
 
   export class EventManager {
     constructor (client: Client)
