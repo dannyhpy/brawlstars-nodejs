@@ -50,21 +50,6 @@ declare module 'brawlstars.js' {
      * See https://developer.brawlstars.com/ to get a token.
      */
     token: string
-
-    /**
-     * @deprecated Use `client.players.fetch` instead
-     */
-    getPlayer (tag: string): Promise<Player>
-
-    /**
-     * @deprecated Use `client.clubs.fetch` instead
-     */
-    getClub (tag: string): Promise<Club>
-
-    /**
-     * @deprecated Use `client.brawlers.fetch` instead
-     */
-    getBrawlers (): Promise<Brawler[]>
   }
 
   export class PlayerManager {

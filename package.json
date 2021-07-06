@@ -1,7 +1,7 @@
 {
   "name": "brawlstars.js",
   "version": "2.0.0",
-  "description": "API Wrapper for Brawl Stars",
+  "description": "API Wrapper for BrawlStars",
   "main": "index.js",
   "bin": {
     "brawlstars": "./bin/brawlstars"
