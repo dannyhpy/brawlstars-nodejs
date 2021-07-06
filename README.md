@@ -5,7 +5,7 @@
 
 ## How to use?
 
-Install `brawlstars.js` using `npm`:  
+Install **brawlstars.js** using **npm**:  
 `npm install brawlstars.js`
 
 In order to access the official BrawlStars API, you need to authenticate using
@@ -13,7 +13,7 @@ a **token**. To get a **token**, sign up on the [BrawlStars for developers](http
 website.
 
 Once you have a **token**, you can start performing requests to their API:  
-```
+```javascript
 const BrawlStars = require("brawlstars.js")
 const bs = new BrawlStars.Client({
   token: "[...]" /* insert your token here. */
@@ -25,7 +25,7 @@ bs.players.fetch("#AABBCCDD" /* insert your player tag here. */)
   })
 ```
 
-> Wanna see everything else? Peek into the `examples` directory.
+> Wanna see everything else? Peek into the [`examples`](./examples) directory.
 
 ## Need help?
 
