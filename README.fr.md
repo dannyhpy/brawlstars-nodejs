@@ -1,7 +1,7 @@
 # brawlstars.js
 [Anglais (English)](./README.md) - [Français](./README.fr.md)
 
-**brawlstars.js est une librairie pour intéragir avec l'API de BrawlStars pour Node.js**
+**brawlstars.js est une librairie pour interagir avec l'API de BrawlStars pour Node.js**
 
 ## Comment l'utiliser ?
 
