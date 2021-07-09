@@ -1,26 +1,33 @@
 # brawlstars.js
+[English](./README.md) - [French (Français)](./README.fr.md)
 
-**brawlstars.js is an API wrapper for Brawl Stars in Javascript**
+**brawlstars.js is an API wrapper for BrawlStars for the Node.js runtime**
 
-## Starting
+## How to use?
 
+Install **brawlstars.js** using **npm**:  
 `npm install brawlstars.js`
 
+In order to access the official BrawlStars API, you need to authenticate using
+a **token**. To get a **token**, sign up on the [BrawlStars for developers](https://developer.brawlstars.com)
+website.
+
+Once you have a **token**, you can start performing requests to their API:  
 ```javascript
 const BrawlStars = require("brawlstars.js")
-const token      = "Your Token" // Visit https://developer.brawlstars.com/ to get a token
-const client     = new BrawlStars.Client(token)
+const bs = new BrawlStars.Client({
+  token: "[...]" /* insert your token here. */
+})
 
-;(async() => {
-  const player     = await client.getPlayer("#PLAYERTAG")
-  const playerClub = await client.getClub(player.club.tag)
-})()
+bs.players.fetch("#AABBCCDD" /* insert your player tag here. */)
+  .then(you => {
+    console.log( you.name ) // => Your nickname in BrawlStars
+  })
 ```
 
-## Documentation
+> Wanna see everything else? Peek into the [`examples`](./examples) directory.
 
-[Available here](https://brawlstarsjs.docs.apiary.io/)
+## Need help?
 
-## Support
-
-[Discord support](https://discord.gg/Tt6nbfUBnP)
+- We have a [Discord server](https://discord.gg/Tt6nbfUBnP)
+- We have an [online documentation](https://brawlstarsjs.docs.apairy.io/) (**OUTDATED**)
