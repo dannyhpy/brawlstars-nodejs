@@ -10,7 +10,7 @@ const client = new BrawlStars.Client(process.env.TOKEN)
   console.log(player.name) // OG|Diogolo
   console.log(player.hexColor) // player's nameColor in hex format
   console.log(player.brawlerCount) // 27
-  console.log(constants.WIN_TYPE_TRIO)
+  console.log(BrawlStars.Constants.WIN_TYPE_TRIO)
   console.log(player.getWins(BrawlStars.Constants.WIN_TYPE_TOTAL)); //333
   console.log(player.gadgetsCount) //6
   console.log(player.starpowersCount) //5
