@@ -32,8 +32,14 @@
     "url": "https://github.com/dannyhpy/brawlstars-nodejs/issues"
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
+  "scripts": {
+    "docs": "node scripts/genast.js"
+  },
   "dependencies": {
     "node-fetch": "~2.6.1"
+  },
+  "devDependencies": {
+    "typescript-parser": "~2.6.1"
   },
   "typings": "typings"
 }

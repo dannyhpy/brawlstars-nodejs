@@ -29,5 +29,5 @@ bs.players.fetch("#AABBCCDD" /* insère ton tag de joueur ici. */)
 
 ## Besoin d'aide ?
 
-- On a un [serveur Discord](https://discord.gg/Tt6nbfUBnP)
-- On a une [documentation en ligne](https://brawlstarsjs.docs.apairy.io/) (**PAS À JOUR**)
+- Nous avons un [serveur Discord](https://discord.gg/Tt6nbfUBnP)
+- Nous avons une [documentation en ligne](https://dannyhpy.github.io/brawlstars-nodejs)

@@ -6,8 +6,11 @@
 package-lock.json
 node_modules
 
-# Examples directory
+# Repository specific stuff
 examples
+scripts
+docs
 
-# README.md file
+# README.md files
 README.md
+README.fr.md

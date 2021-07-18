@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+
+:root {
+  --background-color: #e0e1ef;
+  --border-color: #6b73ee;
+  --link-color: #2797f3;
+}
+
+body {
+  background: var(--background-color);
+  margin: 0;
+}
+
+a[href] {
+  color: var(--link-color);
+}
+
+/* * */
+
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  margin: auto;
+  box-shadow: 0.25rem 0.25rem var(--border-color);
+  width: calc(100% - 8rem);
+  height: calc(100% - 8rem);
+}
+
+#root > * {
+  background: white;
+}
+
+#root > #pane {
+  flex: 1;
+  border-right: 0.25rem solid var(--border-color);
+}
+
+#root > #main {
+  flex: 3;
+}
