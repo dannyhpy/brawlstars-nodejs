@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
   "dependencies": {
-    "node-fetch": "2.6.1"
+    "node-fetch": "~2.6.1"
   },
   "typings": "typings"
 }
