@@ -35,7 +35,7 @@ client.getPlayer('#PLAYERTAG')
 
   
 ## Support
-[Join our discord server](https://discord.gg/av2w9g9fqt)
+[Join our discord server]()
 
   
 ## Authors
@@ -59,3 +59,12 @@ For major changes please open a issue first
 
 [Apache License](http://www.apache.org/licenses/)
 
+  
+
+
+
+
+  
+
+
+  

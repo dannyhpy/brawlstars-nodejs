@@ -1,4 +1,4 @@
-const BrawlStars = require('..')
+const BrawlStars = require('brawlstars.js')
 const client = new BrawlStars.Client(process.env.TOKEN)
 
 
