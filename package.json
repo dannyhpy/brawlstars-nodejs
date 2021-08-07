@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
   "scripts": {
-    "docs": "node scripts/genast.js"
+    "docs": "node scripts/gendecl.js"
   },
   "dependencies": {
     "node-fetch": "~2.6.1"

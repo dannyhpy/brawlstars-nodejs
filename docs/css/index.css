@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  font-family: sans-serif;
 }
 
 :root {
@@ -13,34 +14,92 @@ body {
   margin: 0;
 }
 
+*::-webkit-scrollbar {
+  background: var(--background-color);
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}
+
 a[href] {
   color: var(--link-color);
 }
 
 /* * */
 
-#root {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  margin: auto;
-  box-shadow: 0.25rem 0.25rem var(--border-color);
-  width: calc(100% - 8rem);
-  height: calc(100% - 8rem);
+@media screen {
+  #root {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: auto;
+    box-shadow: 0.25rem 0.25rem var(--border-color);
+    width: calc(100% - 8rem);
+    height: calc(100% - 8rem);
+  }
+
+  #root > * {
+    background: white;
+  }
+
+  #root > .outline {
+    flex: 1;
+    border-right: 0.25rem solid var(--border-color);
+
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+  }
+
+  #root > .outline > h3 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #root > .outline > .container {
+    overflow: auto;
+  }
+
+  #root > .outline > .container > .obj {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.25rem;
+    border-left: 0.25rem solid gray;
+
+    transition: border 0.1s, padding 0.1s;
+  }
+
+  #root > .outline > .container > .obj:hover {
+    border-left: 0.5rem solid var(--border-color);
+  }
+
+  #root > .outline > .container > .obj:active {
+    padding-left: 0.5rem;
+  }
+
+  #root > .outline > .container > .obj.curr {
+    border-left: 0.5rem solid var(--link-color);
+    font-weight: bold;
+  }
+
+  #root > main {
+    flex: 3;
+    overflow: auto;
+  }
 }
 
-#root > * {
-  background: white;
-}
+@media screen and (max-device-width: 480px) {
+  #root {
+    width: 95%;
+    height: 95%;
+  }
 
-#root > #pane {
-  flex: 1;
-  border-right: 0.25rem solid var(--border-color);
-}
-
-#root > #main {
-  flex: 3;
+  #root > .outline {
+    display: none;
+  }
 }

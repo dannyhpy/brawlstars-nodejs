@@ -1,59 +1,6 @@
 import DownloadableFile from '../lib/DownloadableFile'
 
 declare module 'brawlstars.js' {
-  interface ClientOptions {
-    /**
-     * Token used to interact with the Brawl Stars API.
-     * See https://developer.brawlstars.com/ to get a token.
-     */
-    token: string
-  }
-
-  interface DeveloperAccProperties {
-    developer: {
-      id: string
-      name: string
-      email: string
-      prevLoginIp: string
-    }
-    temporaryAPIToken: string
-    // ...
-  }
-
-  interface KeyProperties {
-    ip: string
-    name: string
-    token: string
-    // ...
-  }
-
-  interface PlayerProperties {
-    tag: string
-    // ...
-  }
-
-  interface ClubProperties {
-    tag: string
-    // ...
-  }
-
-  interface BrawlerProperties {
-    id: number
-    name: string
-    // ...
-  }
-
-  interface EventProperties {
-    startTime: string
-    endTime: string
-    event: {
-      id: number
-      mode: string
-      map: string
-      modifiers?: string[]
-    }
-  }
-
   export class Client {
     constructor (token: string)
     constructor (options: ClientOptions)
@@ -65,6 +12,14 @@ declare module 'brawlstars.js' {
     readonly brawlers: BrawlerManager
     readonly events: EventManager
 
+    /**
+     * Token used to interact with the Brawl Stars API.
+     * See https://developer.brawlstars.com/ to get a token.
+     */
+    token: string
+  }
+
+  interface ClientOptions {
     /**
      * Token used to interact with the Brawl Stars API.
      * See https://developer.brawlstars.com/ to get a token.
@@ -194,5 +149,50 @@ declare module 'brawlstars.js' {
 
     readonly startsAt: Date
     readonly endsAt: Date
+  }
+
+  interface DeveloperAccProperties {
+    developer: {
+      id: string
+      name: string
+      email: string
+      prevLoginIp: string
+    }
+    temporaryAPIToken: string
+    // ...
+  }
+
+  interface KeyProperties {
+    ip: string
+    name: string
+    token: string
+    // ...
+  }
+
+  interface PlayerProperties {
+    tag: string
+    // ...
+  }
+
+  interface ClubProperties {
+    tag: string
+    // ...
+  }
+
+  interface BrawlerProperties {
+    id: number
+    name: string
+    // ...
+  }
+
+  interface EventProperties {
+    startTime: string
+    endTime: string
+    event: {
+      id: number
+      mode: string
+      map: string
+      modifiers?: string[]
+    }
   }
 }
