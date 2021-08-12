@@ -1,6 +1,6 @@
 {
   "name": "brawlstars.js",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "API Wrapper for Brawl Stars",
   "main": "index.js",
   "directories": {
@@ -17,7 +17,7 @@
     "Brawlstars library",
     "Brawlstars Javascript"
   ],
-  "author": "@dannyhpy (https://dannyhpy.xyz)",
+  "author": "@dannyhpy",
   "contributors": [
     {
       "name": "@diogolo",
