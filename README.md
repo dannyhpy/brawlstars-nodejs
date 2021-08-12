@@ -13,6 +13,11 @@
 4. Create a new token. Name it anything, put any description, and for the IP, add the IP address where you will be requesting from.
 5. Hit create token, then click on the token, and your token will show up. This is basically your access key to the API.
 
+## Getting Started Part 2
+**⚠️Please make sure you have a token to start this, if not, refer to Getting Started Part 2 ⚠️**
+
+
+
 ## Documentation
 
 [Available here](https://brawlstarsjs.docs.apiary.io/)
