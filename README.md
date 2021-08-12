@@ -1,6 +1,6 @@
 # brawlstars.js
 
-**brawlstars.js is an API wrapper for Brawl Stars in Javascript**
+**brawlstars.js is an API wrapper for Brawl Stars in Javascript. This uses the Official Brawl Stars API to gather data.**
 
 ## Documentation
 
