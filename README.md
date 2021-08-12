@@ -4,7 +4,7 @@
 
 ## Getting Started Part 1
 
-1. Head to the [Official Brawl Stars API.](https://developer.brawlstars.com)
+1. Head to the [Official Brawl Stars API.](https://developer.brawlstars.com/#/getting-started)
 2. Create a new account.
 3. After creating a account, go to [your account.](https://developer.brawlstars.com/#/account)
 4. Create a new token. Name it anything, put any description, and for the IP, add the IP address where you will be requesting from.
