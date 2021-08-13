@@ -15,6 +15,16 @@
 6. Run in your console ``npm install brawlstars.js``
 7. Your Done!
 
+```javascript
+const BrawlStars = require("brawlstars.js")
+const token      = "Your Token"
+const client     = new BrawlStars.Client(token)
+
+;(async() => {
+  const player     = await client.getPlayer("#PLAYERTAG")
+  const playerClub = await client.getClub(player.club.tag)
+})()
+```
 
 ## Documentation
 
