@@ -11,8 +11,11 @@
 5. Hit create token, then click on the token, and your token will show up. This is basically your access key to the API.
 
 ## Getting Started Part 2
+
 **⚠️Please make sure you have a token to start this, if not, refer to Getting Started Part 2 ⚠️**
 
+1. Run in your console `npm install brawlstars.js`
+2. Your Done!
 
 
 ## Documentation
