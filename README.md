@@ -13,7 +13,7 @@
 **⚠️ Please make sure you have a token to start this, if not, refer to Getting Started ⚠️**
 
 6. Run in your console ``npm install brawlstars.js``
-7. Your Done!
+7. You're done!
 
 ```javascript
 const BrawlStars = require("brawlstars.js")
