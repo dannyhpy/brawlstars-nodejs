@@ -2,7 +2,7 @@
 
 **brawlstars.js is an API wrapper for Brawl Stars in Javascript. This uses the Official Brawl Stars API to gather data.**
 
-## Getting Started Part 1
+## Getting Started
 
 1. Head to the [Official Brawl Stars API.](https://developer.brawlstars.com/#/getting-started)
 2. Create a new account.
@@ -10,12 +10,10 @@
 4. Create a new token. Name it anything, put any description, and for the IP, add the IP address where you will be requesting from.
 5. Hit create token, then click on the token, and your token will show up. This is basically your access key to the API.
 
-## Getting Started Part 2
+**⚠️ Please make sure you have a token to start this, if not, refer to Getting Started ⚠️**
 
-**⚠️Please make sure you have a token to start this, if not, refer to Getting Started Part 2 ⚠️**
-
-1. Run in your console `npm install brawlstars.js`
-2. Your Done!
+6. Run in your console ``npm install brawlstars.js`
+7. Your Done!
 
 
 ## Documentation
