@@ -11,14 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/dannyhpy/brawlstars-nodejs.git"
   },
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "docs": "docgen --source lib --custom docs/index.yml --output docs/docs.json",
-    "docs:dev": "docgen --source lib --custom docs/index.yml --output docs/development.json",
-    "docs:build": "docgen --source lib --custom docs/index.yml --output docs/master.json",
-    "docs:test": "docgen --source lib"
-  }, 
   "keywords": [
     "Brawlstars",
     "Brawlstars API Wrapper",
@@ -42,6 +34,12 @@
     "node-fetch": "^2.6.0"
   },
   "scripts": {
-    "test": "node examples/test.js"
+    "test": "node examples/test.js",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "docs": "docgen --source lib --custom docs/index.yml --output docs/docs.json",
+    "docs:dev": "docgen --source lib --custom docs/index.yml --output docs/development.json",
+    "docs:build": "docgen --source lib --custom docs/index.yml --output docs/master.json",
+    "docs:test": "docgen --source lib"
   }
 }
