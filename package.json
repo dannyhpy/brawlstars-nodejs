@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
   "dependencies": {
+    "@discordjs/docgen": "^0.10.0",
     "node-fetch": "^2.6.0"
   },
   "scripts": {
