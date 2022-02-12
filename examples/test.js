@@ -3,10 +3,10 @@ const client = new BrawlStars.Client(process.env.TOKEN)
 
 
 ;(async function () {
-  const X = '###########################'
+  const terminalSep = '###########################'
   const player = await client.getPlayer('#R8GVJ8GR') // get player by #ID
 
-  console.log(X)
+  console.log(terminalSep)
   console.log(player.name) // OG|Diogolo
   console.log(player.hexColor) // player's nameColor in hex format
   console.log(player.brawlerCount) // 27
@@ -26,7 +26,7 @@ const client = new BrawlStars.Client(process.env.TOKEN)
   // Club
   if (player.club) {
     const club = await client.getClub(player.club.tag) // get club by #ID
-    console.log(X)
+    console.log(terminalSep)
     console.log(club.type) // open
     console.log(club.getMemberRank(player.tag)) // 7
     console.log(club.getMemberRole(player.tag)) // member
@@ -35,15 +35,20 @@ const client = new BrawlStars.Client(process.env.TOKEN)
 
   // Rankings
   const FrenchRank = await client.getRanking('FR', 'players') // get french player ranking
-  console.log(X)
+  console.log(terminalSep)
   console.log(FrenchRank.getTop(3)) // 3 first objects
   console.log(FrenchRank.isRanked(player.tag)) // false
 
   // Brawlers
   const brawlers = await client.getBrawlers() // get brawlers
-  console.log(X)
+  console.log(terminalSep)
   console.log(brawlers.count) // 32
   console.log(brawlers.getBrawlersNames()) // list of brawler names
   console.log(brawlers.getBrawlerStarPowersByName('FRANK')) // list of 'FRANK' starpowers
   console.log(brawlers.getBrawlersStarPowers())
+  
+  // Event rotation
+  const events = await client.getEventRotation()
+  console.log(terminalSep)
+  console.log(events)
 })()
