@@ -29,10 +29,19 @@
     "url": "https://github.com/dannyhpy/brawlstars-nodejs/issues"
   },
   "homepage": "https://github.com/dannyhpy/brawlstars-nodejs#readme",
+  "devDependencies": {
+    "@discordjs/docgen": "^0.10.0",
+  },
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
   },
   "scripts": {
-    "test": "node examples/test.js"
+    "test": "node examples/test.js",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "docs": "docgen --source lib --custom docs/index.yml --output docs/docs.json",
+    "docs:dev": "docgen --source lib --custom docs/index.yml --output docs/development.json",
+    "docs:build": "docgen --source lib --custom docs/index.yml --output docs/master.json",
+    "docs:test": "docgen --source lib"
   }
 }
