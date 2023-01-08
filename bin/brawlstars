@@ -13,6 +13,20 @@ if (token == null) {
 
 const bs = new BrawlStars.Client(token)
 
+const replies = {
+  commandNotFound () {
+    console.error('Command not found.')
+    console.error('See \'brawlstars help\' for more information.')
+    process.exit(1)
+  },
+
+  errorOccured (error) {
+    console.error('An error occured.')
+    console.error(error)
+    process.exit(1)
+  }
+}
+
 switch (process.argv[2]) {
   case 'h':
   case 'help':
@@ -28,10 +42,19 @@ switch (process.argv[2]) {
     break
 
   case 'players':
-    break
+    switch (process.argv[3]) {
+      case 'exists':
+        bs.players.fetch(process.argv[4])
+          .then(player => {
+            console.log(`A player called '${player.name}' exists with this tag.`)
+          })
+          .catch(replies.errorOccured)
+        break
+
+      default:
+        replies.commandNotFound()
+    }
 
   default:
-    console.error('Command not found.')
-    console.error('See \'brawlstars help\' for more information.')
-    process.exit(1)
+    replies.commandNotFound()
 }

@@ -90,6 +90,7 @@ a[href] {
   #root > main {
     flex: 3;
     overflow: auto;
+    padding: 1rem;
   }
 }
 

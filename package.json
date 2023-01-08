@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "API Wrapper for BrawlStars",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "brawlstars": "./bin/brawlstars"
   },
@@ -19,13 +20,6 @@
     "api",
     "library",
     "nodejs"
-  ],
-  "author": "@dannyhpy",
-  "contributors": [
-    {
-      "name": "@diogolo",
-      "url": "https://atlar.fr/"
-    }
   ],
   "license": "Apache-2.0",
   "bugs": {

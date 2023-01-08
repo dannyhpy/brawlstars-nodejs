@@ -1,6 +1,24 @@
 import DownloadableFile from '../lib/DownloadableFile'
 
 declare module 'brawlstars.js' {
+  export class Brawler {
+    constructor (client: Client, props: any)
+    readonly client: Client
+
+    readonly id: number
+    readonly name: string
+  }
+
+  export class BrawlerIcon {}
+
+  export class BrawlerManager {
+    constructor (client: Client)
+    readonly client: Client
+
+    fetch (id: number): Promise<Brawler>
+    fetchAll (): Promise<Brawler[]>
+  }
+
   export class Client {
     constructor (token: string)
     constructor (options: ClientOptions)
@@ -27,8 +45,40 @@ declare module 'brawlstars.js' {
     token: string
   }
 
+  export class Club {
+    constructor (client: Client, props: any)
+    readonly client: Client
+    /**
+     * Describes if this object contains only partial information.
+     * If this is the case, you might want to use **fetch()** on this object.
+     */
+    readonly partial: bool
+
+    readonly tag: string
+    readonly name: string
+    readonly icon: ClubIcon
+    readonly description: string
+  }
+
+  export class ClubIcon extends DownloadableFile {
+    constructor (id: number)
+    readonly id: number
+  }
+
+  export class ClubManager {
+    constructor (client: Client)
+    readonly client: Client
+
+    /**
+     * Fetch a club using its in-game tag
+     */
+    fetch (tag: string): Promise<Club & { partial: false }>
+
+    tryFetch (tag: string): Promise<{ error?: Error, club?: Club}>
+  }
+
   export class DeveloperAccount {
-    constructor (client: Client, props: DeveloperAccProperties)
+    constructor (client: Client, props: DeveloperAccountProperties)
     readonly client: Client
 
     readonly keys: KeyManager
@@ -37,16 +87,45 @@ declare module 'brawlstars.js' {
     readonly ip: string
     readonly name: string
     readonly email: string
-    readonly token: string
+    readonly temporaryToken: string
   }
 
-  export class KeyManager {
+  interface DeveloperAccountProperties {
+    developer: {
+      id: string
+      name: string
+      email: string
+      prevLoginIp: string
+    }
+    temporaryAPIToken: string
+    // ...
+  }
+
+  export class Event {
     constructor (client: Client)
     readonly client: Client
 
-    create (/* ... */): Promise<Key>
+    readonly startsAt: Date
+    readonly endsAt: Date
+  }
 
-    delete (/* ... */): Promise<void>
+  export class EventManager {
+    constructor (client: Client)
+    readonly client: Client
+
+    /** Fetch a list of the current active events */
+    fetch (): Promise<Event[]>
+  }
+
+  interface EventProperties {
+    startTime: string
+    endTime: string
+    event: {
+      id: number
+      mode: string
+      map: string
+      modifiers?: string[]
+    }
   }
 
   export class Key {
@@ -68,98 +147,13 @@ declare module 'brawlstars.js' {
     delete (): Promise<void>
   }
 
-  export class PlayerManager {
+  export class KeyManager {
     constructor (client: Client)
     readonly client: Client
 
-    /**
-     * Fetch a player using his in-game tag
-     */
-    fetch (tag: string): Promise<Player>
-  }
-  
-  export class Player {
-    constructor (client: Client, props: PlayerProperties)
-    readonly client: Client
+    create (/* ... */): Promise<Key>
 
-    readonly tag: string
-    readonly name: string
-    readonly icon: PlayerIcon
-  }
-
-  export class PlayerIcon extends DownloadableFile {
-    constructor (id: number)
-    readonly id: number
-  }
-
-  export class ClubManager {
-    constructor (client: Client)
-    readonly client: Client
-
-    /**
-     * Fetch a club using its in-game tag
-     */
-    fetch (tag: string): Promise<Club>
-  }
-
-  export class Club {
-    constructor (client: Client, props: ClubProperties)
-    readonly client: Client
-
-    readonly tag: string
-    readonly name: string
-    readonly icon: ClubIcon
-    readonly description: string
-  }
-
-  export class ClubIcon extends DownloadableFile {
-    constructor (id: number)
-    readonly id: number
-  }
-
-  export class BrawlerManager {
-    constructor (client: Client)
-    readonly client: Client
-
-    fetch (id: number): Promise<Brawler>
-    fetchAll (): Promise<Brawler[]>
-  }
-
-  export class Brawler {
-    constructor (client: Client, props: BrawlerProperties)
-    readonly client: Client
-
-    readonly id: number
-    readonly name: string
-  }
-
-  export class BrawlerIcon {}
-
-  export class EventManager {
-    constructor (client: Client)
-    readonly client: Client
-
-    /** Fetch a list of the current active events */
-    fetch (): Promise<Event[]>
-  }
-
-  export class Event {
-    constructor (client: Client)
-    readonly client: Client
-
-    readonly startsAt: Date
-    readonly endsAt: Date
-  }
-
-  interface DeveloperAccProperties {
-    developer: {
-      id: string
-      name: string
-      email: string
-      prevLoginIp: string
-    }
-    temporaryAPIToken: string
-    // ...
+    delete (/* ... */): Promise<void>
   }
 
   interface KeyProperties {
@@ -169,30 +163,63 @@ declare module 'brawlstars.js' {
     // ...
   }
 
-  interface PlayerProperties {
-    tag: string
-    // ...
+  export class Player {
+    constructor (client: Client, props: any)
+    readonly client: Client
+    /**
+     * Describes if this object contains only partial information.
+     * If this is the case, you might want to use **fetch()** on this object.
+     */
+    readonly partial: bool
+
+    readonly color: number
+    readonly club?: Club & { partial: true }
+    readonly experience: PlayerExperience
+    readonly gears: PlayerGear[]
+    readonly icon: PlayerIcon
+    readonly name: string
+    readonly tag: string
+    readonly trophies: PlayerTrophies
+    readonly victories: PlayerVictories
   }
 
-  interface ClubProperties {
-    tag: string
-    // ...
+  interface PlayerExperience {
+    readonly level: number
+    readonly points: number
+  }
+  
+  interface PlayerGear {
+    readonly id: number
+    readonly name: any /*  */
+    readonly level: number
   }
 
-  interface BrawlerProperties {
-    id: number
-    name: string
-    // ...
+  export class PlayerIcon extends DownloadableFile {
+    constructor (id: number)
+    readonly id: number
   }
 
-  interface EventProperties {
-    startTime: string
-    endTime: string
-    event: {
-      id: number
-      mode: string
-      map: string
-      modifiers?: string[]
-    }
+  export class PlayerManager {
+    constructor (client: Client)
+    readonly client: Client
+
+    /**
+     * Fetch a player using his in-game tag
+     */
+    fetch (tag: string): Promise<Player & { partial: false }>
+
+    tryFetch (tag: string): Promise<{ error?: Error, player?: Player}>
+  }
+
+  interface PlayerTrophies {
+    readonly current: number
+    readonly highest: number
+  }
+
+  interface PlayerVictories {
+    readonly solo: number
+    readonly duo: number
+    readonly trio: number
+    readonly total: number
   }
 }

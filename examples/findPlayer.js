@@ -1,11 +1,12 @@
+import { Client } from '../index.js'
+
 const token = process.env.TOKEN
 if (!token) {
   console.error('Environment variable TOKEN not found.')
   process.exit(1)
 }
 
-const BrawlStars = require('..')
-const bs = new BrawlStars.Client(token)
+const bs = new Client(token)
 
 const tag = process.env.TAG || '#JJL9YVJ2'
 
